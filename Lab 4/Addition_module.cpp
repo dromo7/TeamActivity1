@@ -9,8 +9,8 @@ int main(){
     int userInput;
     int wins = 0;
     
-    cout << "Welcome to the Math Quiz!" << endl;
-    cout << "Enter -9999 to quit and see your score." << endl;
+    cout << "Welcome to the Addition Quiz!" << endl;
+    cout << "Enter -999 to quit and see your score." << endl;
     cout << "----------------------------------------" << endl;
     
     while (true) {
@@ -21,7 +21,7 @@ int main(){
         cout << "What is " << num1 << " + " << num2 << "?: ";
         cin >> userInput;
         
-        if (userInput == -9999) {
+        if (userInput == -999) {
             cout << "Goodbye!" << endl;
             cout << "You got " << wins << " correct answer(s)!" << endl;
             break;
