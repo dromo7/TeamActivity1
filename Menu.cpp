@@ -50,6 +50,7 @@ int main() {
                 break;}
 
             case 2: {
+                while (response != "-999/a") {
                 num1 = rand() % 100 + 1;
                 num2 = rand() % 100 + 1;
                 result = num1 - num2;
@@ -63,11 +64,27 @@ int main() {
                 cout << "Incorrect. The correct answer is " << result << "." << endl;
                 icount++;
             }
-        cout << "Do you want to try another problem? ('y' for Yes and '-999/a' for No): ";
-        cin >> response;
+            cout << "Do you want to try another problem? ('y' for Yes and '-999/a' for No): ";
+            cin >> response;
         break;}
+            }
             case 3: {
-
+                while (response != "-999/a") {
+                num1 = rand() % 100 + 1;
+                num2 = rand() % 100 + 1;
+                result = num1 * num2;
+                cout << "What is " << num1 << " * " << num2 << "? ";
+                cin >> answer;
+            if (answer == to_string(result)) {
+                cout << "Correct!" << endl;
+                count++;
+            } 
+            else {
+                cout << "Incorrect. The correct answer is " << result << "." << endl;
+                icount++;
+            }
+            cout << "Do you want to try another problem? ('y' for Yes and '-999/a' for No): ";
+            cin >> response;
             }
             case 4: {
                 while (user_input != "-999/a"){
@@ -95,10 +112,29 @@ int main() {
                             }
                 break;}
             case 5: {
-                
-        }
+                int wins = 0;
+                int loss = 0;
+                int correctAnswers = 0;
+                int wrongAnswers = 0;
+                int count = 0;
+                int icount = 0;
+                int d_count = 0;
+                int d_icount = 0;
+                int total_w = wins + count + correctAnswers + d_count;
+                int total_l = loss + icount + wrongAnswers + d_icount;
+                char choice;
+                cout << "Here is your performance summary: " << endl;
+                cout << "----------------------------------" << endl;
+                cout << setw(16) << "Addition: " << wins << " correct : " << loss << " incorrect" << endl;// Addition section needs incorrect count 
+                cout << setw(16) << "Subtraction: " << count << " correct : " << icount << " incorrect" << endl;
+                cout << setw(16) << "Multiplication: " << correctAnswers << " correct : " << wrongAnswers << " incorrect" << endl;
+                cout << setw(16) << "Division: " << d_count << " correct : " << d_icount << " incorrect" << endl; //Variable name conflicts with subtraction section in initial individual programs
+                cout << setw(16) << "Total: " << total_w << " correct : " << total_l << " incorrect" << endl << endl;
+                break;}
 
         }
+        return 0;
+    }
 
     
 
