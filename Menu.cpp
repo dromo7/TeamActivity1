@@ -33,8 +33,8 @@ while (true) {
     switch(choice){
         case 1:{
             do{
-            num1 = rand() % 100;
-            num2 = rand() % 100;
+            num1 = rand() % 100 + 1;
+            num2 = rand() % 100 + 1;
             cout << "What is " << num1 << " + " << num2 << "?" << endl;
             cin >> answer;
 
@@ -51,7 +51,24 @@ while (true) {
             } while (user_cont != "-999/a");
             }
             break;
-        case 2: cout << "in progress";
+        case 2: {
+                    do{
+            num1 = rand() % 100 + 1;
+            num2 = rand() % 100 + 1;
+            cout << "What is " << num1 << " - " << num2 << "?" << endl;
+            cin >> answer;
+
+            if (answer == num1 - num2 ) {
+                cout << "Correct" << endl;
+                subCorrect++;
+            }
+            else {
+                cout << "Incorrect";
+                subIncorrect++;
+            }
+            cout << "Do you want to try another problem? ('y' for Yes and '-999/a for no): ";
+            cin >> user_cont;
+            } while (user_cont != "-999/a");}
                 break;
         case 3: cout << "in progress";
                 break;
