@@ -16,8 +16,8 @@ int main () {
     int divIncorrect = 0;
     int num1;
     int num2;
-    string answer;
-    int addAnswer;
+    int answer;
+    string user_cont;
     srand(time(0));
 while (true) {
     cout << "Welcome to the math quiz!" << endl;
@@ -35,29 +35,33 @@ while (true) {
             do{
             num1 = rand() % 100;
             num2 = rand() % 100;
-            
-            cout << "What is" << num1 << " + " << num2 << "?" << endl;
+            cout << "What is " << num1 << " + " << num2 << "?" << endl;
             cin >> answer;
 
-            if (answer == addAnswer) {
-                cout << "Correct";
+            if (answer == num1 + num2 ) {
+                cout << "Correct" << endl;
                 addCorrect++;
-
             }
-
-            } while (answer != "-999/a");
+            else {
+                cout << "Incorrect";
+                addIncorrect++;
             }
-        case 2:
-        
-        case 3:
-
-        case 4:
-
-        case 5:
-
-        case 6:
-
-        default:
+            cout << "Do you want to try another problem? ('y' for Yes and '-999/a for no): ";
+            cin >> user_cont;
+            } while (user_cont != "-999/a");
+            }
+            break;
+        case 2: cout << "in progress";
+                break;
+        case 3: cout << "in progress";
+                break;
+        case 4: cout << "in progress";
+                break;
+        case 5: cout << "in progress";
+                break;
+        case 6: cout << "in progress";
+                break;
+        default: cout << "in progress";
     }
 }
 }
