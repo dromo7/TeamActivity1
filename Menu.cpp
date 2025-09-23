@@ -30,20 +30,5 @@ while (true){
     cout << "q. Quit" << endl;
     cout << "Enter your choice (1-4): ";
     cin >> choice;
-    switch(choice){
-        case "1":
-
-        case "2":
-        
-        case "3":
-
-        case "4":
-
-        case "5":
-
-        case "q":
-
-        default:
-    }
 
 }
