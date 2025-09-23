@@ -6,6 +6,7 @@ using namespace std;
 
 int main() {
     int choice;
+    int num1, num2;
     int d_count = 0;
     int d_icount = 0;
     string user_input;
@@ -27,7 +28,7 @@ int main() {
     cout << "q. Quit" << endl;
     cout << "Enter your choice (1-4): ";
     cin >> choice;
-
+    if choice ==
     while (choice != "-999/a") {
         switch (choice) {
             case 1: {
