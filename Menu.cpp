@@ -5,7 +5,7 @@
 using namespace std;
 
 int main () {
-    int choice;
+    char choice;
     int addCorrect = 0;
     int addIncorrect = 0;
     int subCorrect = 0;
@@ -30,4 +30,20 @@ while (true){
     cout << "q. Quit" << endl;
     cout << "Enter your choice (1-4): ";
     cin >> choice;
+    switch(choice){
+        case "1":
+
+        case "2":
+        
+        case "3":
+
+        case "4":
+
+        case "5":
+
+        case "q":
+
+        default:
+    }
+
 }
