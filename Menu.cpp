@@ -89,7 +89,27 @@ while (true) {
             cin >> user_cont;
             } while (user_cont != "-999/a");}
                 break;
-        case 4: cout << "in progress";
+        case 4: {
+            do{
+            num1 = rand() % 100 + 2;
+            num2 = rand() % 50 + 2;
+            while (num1 % num2 > 0) {
+                num1 = rand() % 100 + 2;
+                num2 = rand() % 50 + 2;}
+            cout << "What is " << num1 << " / " << num2 << "?" << endl;
+            cin >> answer;
+
+            if (answer == num1 / num2 ) {
+                cout << "Correct" << endl;
+                divCorrect++;
+            }
+            else {
+                cout << "Incorrect";
+                divIncorrect++;
+            }
+            cout << "Do you want to try another problem? ('y' for Yes and '-999/a for no): ";
+            cin >> user_cont;
+            } while (user_cont != "-999/a");}
                 break;
         case 5: cout << "in progress";
                 break;
