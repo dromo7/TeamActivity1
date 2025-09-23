@@ -15,6 +15,7 @@ int main() {
     cout << "2. Subtraction" << endl;
     cout << "3. Multiplication" << endl;
     cout << "4. Division" << endl;
+    cout << "5. Statistics" << endl;
     cout << "Enter your choice (1-4): ";
     cin >> choice;
 
@@ -30,6 +31,9 @@ int main() {
             break;
         case 4:
             mainDivision();
+            break;
+        case 5:
+            summary();
             break;
         default:
             cout << "Invalid choice. Please restart the program and select a valid option." << endl;
