@@ -18,8 +18,9 @@ int main () {
     int num2;
     int answer;
     string user_cont;
+    bool no_quit = true;
     srand(time(0));
-while (true) {
+while (no_quit == true) {
     cout << "Welcome to the math quiz!" << endl;
     cout << "Please select the type of problems you want to practice:" << endl;
     cout << "1. Addition" << endl;
@@ -125,7 +126,7 @@ while (true) {
                 cout << endl;
                 }  
                 break;
-        case 6: cout << "in progress";
+        case 6: no_quit = false;
                 break;
         default: cout << "Not valid choice. Please try again." << endl;
     }
