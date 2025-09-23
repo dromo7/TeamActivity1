@@ -30,8 +30,14 @@ while (true) {
     cout << "Enter your choice (1-6): ";
     cin >> choice;
     switch(choice){
-        case 1:
+        case 1:{
             num1 = rand() % 100;
+            num2 = rand() % 100;
+            answer = num1 + num2;
+            
+            cout << "What is" << num1 << " + " << num2 << "?" << endl;
+            cin >> answer; 
+            }
         case 2:
         
         case 3:
