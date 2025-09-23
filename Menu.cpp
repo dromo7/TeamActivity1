@@ -24,6 +24,7 @@ int main() {
     cout << "3. Multiplication" << endl;
     cout << "4. Division" << endl;
     cout << "5. Statistics" << endl;
+    cout << "q. Quit" << endl;
     cout << "Enter your choice (1-4): ";
     cin >> choice;
 
