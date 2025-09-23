@@ -16,7 +16,8 @@ int main () {
     int divIncorrect = 0;
     int num1;
     int num2;
-    int answer;
+    string answer;
+    int addAnswer;
     srand(time(0));
 while (true) {
     cout << "Welcome to the math quiz!" << endl;
@@ -31,12 +32,20 @@ while (true) {
     cin >> choice;
     switch(choice){
         case 1:{
+            do{
             num1 = rand() % 100;
             num2 = rand() % 100;
-            answer = num1 + num2;
             
             cout << "What is" << num1 << " + " << num2 << "?" << endl;
-            cin >> answer; 
+            cin >> answer;
+
+            if (answer == addAnswer) {
+                cout << "Correct";
+                addCorrect++;
+
+            }
+
+            } while (answer != "-999/a");
             }
         case 2:
         
