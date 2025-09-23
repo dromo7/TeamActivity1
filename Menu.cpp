@@ -1,9 +1,3 @@
-#include "Subtraction.cpp"
-#include "Addition_module.cpp"
-#include "division.cpp"
-#include "summary.cpp"
-
-
 #include <iostream>
 using namespace std;
 
@@ -19,25 +13,54 @@ int main() {
     cout << "Enter your choice (1-4): ";
     cin >> choice;
 
-    switch (choice) {
-        case 1:
-            mainAddition_module();
-            break;
-        case 2:
-            mainSubtraction();
-            break;
-        case 3:
-            mainHW();
-            break;
-        case 4:
-            mainDivision();
-            break;
-        case 5:
-            summary();
-            break;
-        default:
-            cout << "Invalid choice. Please restart the program and select a valid option." << endl;
-            break;
-    }
+    while (choice != "-999/a") {
+        switch (choice) {
+            case 1: {
+                int num1 = rand() % 100;
+                int num2 = rand() % 100;
+                correctAnswer = num1 + num2;
+        
+                cout << "What is " << num1 << " + " << num2 << "?: ";
+                cin >> userInput;
+        
+                if (userInput == "-999/a") {
+                    cout << "Goodbye!" << endl;
+                    cout << "You got " << wins << " correct answer(s)!" << endl;
+                    break;
+                 }
+                else if (userInput == correctAnswer) {
+                    cout << "That's correct!" << endl;
+                    wins++;
+                }
+                else {
+                    cout << "That's incorrect! The correct answer was " << correctAnswer << endl;
+                    loss++;
+                }
+                    cout << endl;
+                break;}
+
+            case 2: {
+                num1 = rand() % 100 + 1;
+                num2 = rand() % 100 + 1;
+                result = num1 - num2;
+                cout << "What is " << num1 << " - " << num2 << "? ";
+                cin >> answer;
+            if (answer == to_string(result)) {
+                cout << "Correct!" << endl;
+                count++;
+            } 
+            else {
+                cout << "Incorrect. The correct answer is " << result << "." << endl;
+                icount++;
+            }
+        cout << "Do you want to try another problem? ('y' for Yes and '-999/a' for No): ";
+        cin >> response;
+        break;}
+    
+            }
+        }
+
+        }
+
     return 0;
-}
+
