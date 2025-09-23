@@ -8,6 +8,7 @@ int main(){
     int correctAnswer;
     int userInput;
     int wins = 0;
+    int loss = 0;
     
     cout << "Welcome to the Addition Quiz!" << endl;
     cout << "Enter -999 to quit and see your score." << endl;
@@ -32,6 +33,7 @@ int main(){
         }
         else {
             cout << "That's incorrect! The correct answer was " << correctAnswer << endl;
+            loss++;
         }
         cout << endl;
     }
