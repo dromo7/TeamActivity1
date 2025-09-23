@@ -29,4 +29,5 @@ while (true){
     cout << "5. Statistics" << endl;
     cout << "q. Quit" << endl;
     cout << "Enter your choice (1-4): ";
+    cin >> choice;
 }
