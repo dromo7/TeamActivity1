@@ -43,10 +43,10 @@ while (true) {
                 addCorrect++;
             }
             else {
-                cout << "Incorrect";
+                cout << "Incorrect" << endl;
                 addIncorrect++;
             }
-            cout << "Do you want to try another problem? ('y' for Yes and '-999/a for no): ";
+            cout << "Do you want to try another problem? ('-999/a' for no, otherwise, enter any value): ";
             cin >> user_cont;
             } while (user_cont != "-999/a");
             }
@@ -63,10 +63,10 @@ while (true) {
                 subCorrect++;
             }
             else {
-                cout << "Incorrect";
+                cout << "Incorrect" << endl;
                 subIncorrect++;
             }
-            cout << "Do you want to try another problem? ('y' for Yes and '-999/a for no): ";
+            cout << "Do you want to try another problem? ('-999/a' for no, otherwise, enter any value): ";
             cin >> user_cont;
             } while (user_cont != "-999/a");}
                 break;
@@ -82,10 +82,10 @@ while (true) {
                 multCorrect++;
             }
             else {
-                cout << "Incorrect";
+                cout << "Incorrect" << endl;
                 multIncorrect++;
             }
-            cout << "Do you want to try another problem? ('y' for Yes and '-999/a for no): ";
+            cout << "Do you want to try another problem? ('-999/a' for no, otherwise, enter any value): ";
             cin >> user_cont;
             } while (user_cont != "-999/a");}
                 break;
@@ -104,18 +104,30 @@ while (true) {
                 divCorrect++;
             }
             else {
-                cout << "Incorrect";
+                cout << "Incorrect"<< endl;
                 divIncorrect++;
             }
-            cout << "Do you want to try another problem? ('y' for Yes and '-999/a for no): ";
+            cout << "Do you want to try another problem? ('-999/a' for no, otherwise, enter any value): ";
             cin >> user_cont;
             } while (user_cont != "-999/a");}
                 break;
-        case 5: cout << "in progress";
+        case 5: {
+                cout << "Here is your performance summary: " << endl;
+                cout << "----------------------------------" << endl;
+                cout << setw(16) << "Addition: " << addCorrect << " correct : " << addIncorrect << " incorrect" << endl;
+                cout << setw(16) << "Subtraction: " << subCorrect << " correct : " << subIncorrect << " incorrect" << endl;
+                cout << setw(16) << "Multiplication: " << multCorrect << " correct : " << multIncorrect << " incorrect" << endl;
+                cout << setw(16) << "Division: " << divCorrect << " correct : " << divIncorrect << " incorrect" << endl;
+                cout << setw(16) << "Total: " << addCorrect + subCorrect + multCorrect + divCorrect << " correct : " << addIncorrect + subIncorrect + multIncorrect + divIncorrect << " incorrect" << endl << endl;
+                cout << "----------------------------------" << endl;
+                cout << "Enter any value to go back to menu."<< endl;
+                cin >> user_cont;
+                cout << endl;
+                }  
                 break;
         case 6: cout << "in progress";
                 break;
-        default: cout << "in progress";
+        default: cout << "Not valid choice. Please try again." << endl;
     }
 }
 }
