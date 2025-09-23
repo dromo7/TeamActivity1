@@ -1,6 +1,8 @@
 #include "Subtraction.cpp"
 #include "Addition_module.cpp"
-#include "HW.cpp"
+#include "division.cpp"
+#include "summary.cpp"
+
 
 #include <iostream>
 using namespace std;
