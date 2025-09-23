@@ -70,7 +70,24 @@ while (true) {
             cin >> user_cont;
             } while (user_cont != "-999/a");}
                 break;
-        case 3: cout << "in progress";
+        case 3: {
+            do{
+            num1 = rand() % 12 + 1;
+            num2 = rand() % 12 + 1;
+            cout << "What is " << num1 << " x " << num2 << "?" << endl;
+            cin >> answer;
+
+            if (answer == num1 * num2 ) {
+                cout << "Correct" << endl;
+                multCorrect++;
+            }
+            else {
+                cout << "Incorrect";
+                multIncorrect++;
+            }
+            cout << "Do you want to try another problem? ('y' for Yes and '-999/a for no): ";
+            cin >> user_cont;
+            } while (user_cont != "-999/a");}
                 break;
         case 4: cout << "in progress";
                 break;
