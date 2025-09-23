@@ -13,6 +13,10 @@ int main() {
     int denomenator;
     int user_answer;
     int final_answer;
+    int correctAnswer;
+    int userInput;
+    int wins = 0;
+    int loss = 0;
     cout << "Welcome to the Math Quiz!" << endl;
     cout << "Please select the type of problems you want to practice:" << endl;
     cout << "1. Addition" << endl;
