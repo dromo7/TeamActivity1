@@ -1,6 +1,6 @@
 #include <iostream>
-#include <string>
 #include <cstdlib>
+<<<<<<< HEAD
 #include <iomanip>
 using namespace std;
 
@@ -143,4 +143,6 @@ int main() {
     }
 
     
+=======
+>>>>>>> 1262f49a32a7434e90160831a2d0c4f91f05abc0
 
