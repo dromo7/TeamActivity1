@@ -2,6 +2,9 @@
 #include <cstdlib>
 #include <ctime>
 #include <iomanip>
+#include <fstream>
+#include <string>
+
 using namespace std;
 
 int main () {
@@ -121,6 +124,23 @@ while (no_quit == true) {
                 cout << setw(16) << "Division: " << divCorrect << " correct : " << divIncorrect << " incorrect" << endl;
                 cout << setw(16) << "Total: " << addCorrect + subCorrect + multCorrect + divCorrect << " correct : " << addIncorrect + subIncorrect + multIncorrect + divIncorrect << " incorrect" << endl << endl;
                 cout << "----------------------------------" << endl;
+                
+                ofstream outFile ("results.txt");
+                if (outFile.is_open()) {
+                    outFile << "Here is your performance summary: " << endl;
+                    outFile << "----------------------------------" << endl;
+                    outFile << "Addition: " << addCorrect << " correct : " << addIncorrect << " incorrect" << endl;
+                    outFile << "Subtraction: " << subCorrect << " correct : " << subIncorrect << " incorrect" << endl;
+                    outFile << "Multiplication: " << multCorrect << " correct : " << multIncorrect << " incorrect" << endl;
+                    outFile << "Division: " << divCorrect << " correct : " << divIncorrect << " incorrect" << endl;
+                    outFile << "Total: " << addCorrect + subCorrect + multCorrect + divCorrect << " correct : " << addIncorrect + subIncorrect + multIncorrect + divIncorrect << " incorrect" << endl << endl;
+                    outFile << "----------------------------------" << endl;
+                    outFile.close();
+                    cout << "Your results have been saved to results.txt" << endl;
+                } else {
+                    cout << "Unable to open file";
+                }
+
                 cout << "Enter any value to go back to menu."<< endl;
                 cin >> user_cont;
                 cout << endl;
